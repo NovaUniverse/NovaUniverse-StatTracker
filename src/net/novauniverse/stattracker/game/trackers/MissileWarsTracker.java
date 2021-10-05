@@ -71,7 +71,9 @@ public class MissileWarsTracker extends NovaModule implements Listener {
 			return;
 		}
 
-		session.setMetadata(session.getMetadata() + "," + e.getWinningTeam().name());
+		if (e.getWinningTeam() != null) {
+			session.setMetadata(session.getMetadata() + "," + e.getWinningTeam().name());
+		}
 
 		participants.forEach((UUID uuid, TeamColor color) -> {
 			boolean winner = false;

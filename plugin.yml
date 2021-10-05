@@ -1,0 +1,6 @@
+name: NovaStatTracker
+main: net.novauniverse.stattracker.NovaStatTracker
+description: Nova stat tracker
+version: 1.0
+depend: [NovaCore, NovaMain]
+softdepend: [NovaGamesTarget]

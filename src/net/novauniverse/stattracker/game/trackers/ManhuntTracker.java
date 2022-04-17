@@ -13,16 +13,15 @@ import net.novauniverse.games.manhunt.v1.game.team.ManhuntRole;
 import net.novauniverse.stattracker.NovaStatTracker;
 import net.novauniverse.stattracker.common.PlayerSessionData;
 import net.novauniverse.stattracker.common.SessionData;
+import net.zeeraa.novacore.spigot.gameengine.module.modules.game.GameEndReason;
 import net.zeeraa.novacore.spigot.module.NovaModule;
-import net.zeeraa.novacore.spigot.module.modules.game.GameEndReason;
 
 public class ManhuntTracker extends NovaModule implements Listener {
 	private SessionData session;
 	private Map<UUID, ManhuntRole> participants;
 
-	@Override
-	public String getName() {
-		return "ManhuntStatTracker";
+	public ManhuntTracker() {
+		super("StatTrack.ManhuntTracker");
 	}
 
 	@Override

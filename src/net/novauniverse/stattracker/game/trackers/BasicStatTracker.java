@@ -12,20 +12,19 @@ import net.novauniverse.stattracker.NovaStatTracker;
 import net.novauniverse.stattracker.common.PlayerSessionData;
 import net.novauniverse.stattracker.common.SessionData;
 import net.zeeraa.novacore.commons.log.Log;
+import net.zeeraa.novacore.spigot.gameengine.module.modules.game.GameEndReason;
+import net.zeeraa.novacore.spigot.gameengine.module.modules.game.events.GameEndEvent;
+import net.zeeraa.novacore.spigot.gameengine.module.modules.game.events.GameStartEvent;
+import net.zeeraa.novacore.spigot.gameengine.module.modules.game.events.PlayerEliminatedEvent;
+import net.zeeraa.novacore.spigot.gameengine.module.modules.game.events.PlayerWinEvent;
 import net.zeeraa.novacore.spigot.module.NovaModule;
-import net.zeeraa.novacore.spigot.module.modules.game.GameEndReason;
-import net.zeeraa.novacore.spigot.module.modules.game.events.GameEndEvent;
-import net.zeeraa.novacore.spigot.module.modules.game.events.GameStartEvent;
-import net.zeeraa.novacore.spigot.module.modules.game.events.PlayerEliminatedEvent;
-import net.zeeraa.novacore.spigot.module.modules.game.events.PlayerWinEvent;
 
 public class BasicStatTracker extends NovaModule implements Listener {
 	private SessionData session;
 	private List<UUID> participants;
 
-	@Override
-	public String getName() {
-		return "BasicStatTracker";
+	public BasicStatTracker() {
+		super("StatTrack.BasicStatTracker");
 	}
 
 	@Override

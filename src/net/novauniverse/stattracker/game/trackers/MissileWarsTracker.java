@@ -13,16 +13,15 @@ import net.novauniverse.games.missilewars.game.team.TeamColor;
 import net.novauniverse.stattracker.NovaStatTracker;
 import net.novauniverse.stattracker.common.PlayerSessionData;
 import net.novauniverse.stattracker.common.SessionData;
+import net.zeeraa.novacore.spigot.gameengine.module.modules.game.GameEndReason;
 import net.zeeraa.novacore.spigot.module.NovaModule;
-import net.zeeraa.novacore.spigot.module.modules.game.GameEndReason;
 
 public class MissileWarsTracker extends NovaModule implements Listener {
 	private SessionData session;
 	private Map<UUID, TeamColor> participants;
 
-	@Override
-	public String getName() {
-		return "MissilewarsStatTracker";
+	public MissileWarsTracker() {
+		super("StatTrack.MissileWarsTracker");
 	}
 
 	@Override
